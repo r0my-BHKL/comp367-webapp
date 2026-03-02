@@ -6,9 +6,9 @@
     String greeting;
 
     if (time.getHour() < 12) {
-        greeting = "Good morning, Ranz, Welcome to COMP367";
+        greeting = "Good morning, Romy, Welcome to COMP367";
     } else {
-        greeting = "Good afternoon, Ranz, Welcome to COMP367";
+        greeting = "Good afternoon, Romy, Welcome to COMP367";
     }
 %>
 
