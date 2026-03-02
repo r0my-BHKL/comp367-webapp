@@ -1,7 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -13,5 +18,12 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
+
+        stage('Archive Artifact') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.war', fingerprint: true
+            }
+        }
+
     }
 }
